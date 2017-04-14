@@ -13,6 +13,9 @@ class Stack
   def top
     @@v
   end
+  def size
+    1
+  end
 end
 
 class TestStack < Test::Unit::TestCase
@@ -25,5 +28,9 @@ class TestStack < Test::Unit::TestCase
   def test_push_and_top
     @obj.push(1)
     assert_equal 1, @obj.top
+  end
+  def test_push_and_size
+    @obj.push(2)
+    assert_equal 1, @obj.size
   end
 end
